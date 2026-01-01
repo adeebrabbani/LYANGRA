@@ -265,8 +265,8 @@
             font-size: clamp(1rem, 2.5vw, 1.3rem);
         }
         
-        /* Key Visual Moments Link Styles */
-        .image-link-container {
+        /* Image Container Styles */
+        .image-container {
             background: white;
             height: 300px;
             border-radius: 8px;
@@ -274,40 +274,27 @@
             align-items: center;
             justify-content: center;
             margin-bottom: 15px;
-            border: 3px dashed #ccc;
-            transition: all 0.3s ease;
-            position: relative;
+            border: 3px solid #ccc;
             overflow: hidden;
+            position: relative;
         }
         
-        .image-link-container:hover {
-            border-color: #ff6b35;
-            transform: translateY(-5px);
-            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+        .image-container img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.3s ease;
         }
         
-        .image-link-placeholder {
+        .image-container:hover img {
+            transform: scale(1.05);
+        }
+        
+        .image-placeholder {
             color: #999;
             font-size: clamp(1rem, 2.5vw, 1.3rem);
             text-align: center;
             padding: 20px;
-            transition: all 0.3s ease;
-        }
-        
-        .image-link-container:hover .image-link-placeholder {
-            color: #ff6b35;
-        }
-        
-        .image-link-text {
-            position: absolute;
-            bottom: 10px;
-            right: 10px;
-            background: rgba(255, 255, 255, 0.9);
-            padding: 5px 10px;
-            border-radius: 4px;
-            font-size: 0.8rem;
-            color: #2a5298;
-            font-weight: bold;
         }
         
         /* Mobile Responsive Styles */
@@ -359,8 +346,8 @@
                 padding: 20px 15px;
             }
             
-            /* Key Visual Moments adjustments */
-            .image-link-container {
+            /* Image container adjustments */
+            .image-container {
                 height: 250px;
             }
             
@@ -430,11 +417,11 @@
                 font-size: 1.1rem;
             }
             
-            .image-link-container {
+            .image-container {
                 height: 200px;
             }
             
-            .image-link-placeholder {
+            .image-placeholder {
                 font-size: 1rem;
                 padding: 15px;
             }
@@ -644,102 +631,72 @@
             </div>
         </div>
 
-        <!-- SLIDE 7: KEY VISUAL MOMENTS WITH EXTERNAL LINKS -->
+        <!-- SLIDE 7: KEY VISUAL MOMENTS WITH IMAGES -->
         <div class="slide">
             <h2>Key Visual Moments from the Film</h2>
             
             <p style="text-align: center; font-size: clamp(1.1rem, 2.5vw, 1.3rem); margin-bottom: 30px; color: #2a5298;">
-                <em>Click on each image placeholder to view the full reference image (external links will be added)</em>
+                <em>Replace the image URLs below with your actual image links to display reference visuals</em>
             </p>
 
             <div style="display: grid; grid-template-columns: 1fr; gap: 30px; margin: 25px 0;">
                 
-                <!-- Image Placeholder 1 with External Link -->
+                <!-- Image 1: The Bleeding Feet Reveal -->
                 <div style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); padding: 30px; border-radius: 12px; box-shadow: 0 8px 20px rgba(0,0,0,0.2);">
-                    <!-- REPLACE THE # WITH YOUR EXTERNAL IMAGE LINK -->
-                    <a href="#" target="_blank" class="image-link-container">
-                        <div class="image-link-placeholder">
-                            CLICK TO VIEW:<br>
-                            <strong style="color: #667eea;">The Bleeding Feet Reveal</strong><br>
-                            <span style="font-size: 0.8em;">(Suresh removes his shoes after winning his first race - bloodied, swollen feet)</span>
-                        </div>
-                        <div class="image-link-text">EXTERNAL LINK</div>
-                    </a>
+                    <div class="image-container">
+                        <!-- REPLACE THIS IMAGE SRC WITH YOUR EXTERNAL IMAGE URL -->
+                        <img src="https://i.postimg.cc/nVw77wg9/IMG-3796.png" alt="The Bleeding Feet Reveal">
+                    </div>
                     <h4 style="color: white; font-size: clamp(1.2rem, 3vw, 1.5rem); margin-bottom: 10px;">The Bleeding Feet Reveal</h4>
                     <p style="color: white; font-size: clamp(0.9rem, 2.5vw, 1.1rem); line-height: 1.6;">After winning his first school race at age 10, Suresh removes his shoes to reveal bloodied, swollen feet. The moment that breaks every heart—his determination to run despite the pain. Malati's embrace and the doctor's devastating verdict that he must switch to wheelchair racing or lose function in his good leg.</p>
                 </div>
 
-                <!-- Image Placeholder 2 with External Link -->
+                <!-- Image 2: The Suresh Surge -->
                 <div style="background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%); padding: 30px; border-radius: 12px; box-shadow: 0 8px 20px rgba(0,0,0,0.2);">
-                    <!-- REPLACE THE # WITH YOUR EXTERNAL IMAGE LINK -->
-                    <a href="https://i.postimg.cc/66fCxt0t/IMG-3794.png" target="_blank" class="image-link-container">
-                        <div class="image-link-placeholder">
-                            CLICK TO VIEW:<br>
-                            <strong style="color: #f5576c;">The Suresh Surge</strong><br>
-                            <span style="font-size: 0.8em;">(Dynamic shot of Suresh executing his signature move during the final race)</span>
-                        </div>
-                        <div class="image-link-text">EXTERNAL LINK</div>
-                    </a>
+                    <div class="image-container">
+                        <!-- REPLACE THIS IMAGE SRC WITH YOUR EXTERNAL IMAGE URL -->
+                        <img src="https://i.postimg.cc/66fCxt0t/IMG-3794.png" alt="The Suresh Surge">
+                    </div>
                     <h4 style="color: white; font-size: clamp(1.2rem, 3vw, 1.5rem); margin-bottom: 10px;">The Suresh Surge</h4>
                     <p style="color: white; font-size: clamp(0.9rem, 2.5vw, 1.1rem); line-height: 1.6;">The signature move that defines Suresh's racing style—explosive double-push technique combined with fearless 45-degree cornering in the final 100 meters. This is the visual spectacle that will have audiences on their feet. High-speed cinematography capturing every muscle, every push, every moment of pure determination.</p>
                 </div>
 
-                <!-- Image Placeholder 3 with External Link -->
+                <!-- Image 3: Mother & Son at Dawn Training -->
                 <div style="background: linear-gradient(135deg, #ff6b35 0%, #f7931e 100%); padding: 30px; border-radius: 12px; box-shadow: 0 8px 20px rgba(0,0,0,0.2);">
-                    <!-- REPLACE THE # WITH YOUR EXTERNAL IMAGE LINK -->
-                    <a href="#" target="_blank" class="image-link-container">
-                        <div class="image-link-placeholder">
-                            CLICK TO VIEW:<br>
-                            <strong style="color: #ff6b35;">Mother & Son at Dawn Training</strong><br>
-                            <span style="font-size: 0.8em;">(Malati timing Suresh at 5 AM in Kolkata Maidan - golden hour lighting)</span>
-                        </div>
-                        <div class="image-link-text">EXTERNAL LINK</div>
-                    </a>
+                    <div class="image-container">
+                        <!-- REPLACE THIS IMAGE SRC WITH YOUR EXTERNAL IMAGE URL -->
+                        <img src="https://i.postimg.cc/5N2Jcs2g/IMG-3789.png" alt="Mother & Son at Dawn Training">
+                    </div>
                     <h4 style="color: white; font-size: clamp(1.2rem, 3vw, 1.5rem); margin-bottom: 10px;">Mother & Son at Dawn Training</h4>
                     <p style="color: white; font-size: clamp(0.9rem, 2.5vw, 1.1rem); line-height: 1.6;">The heart of the film—Malati works night shifts as a cook, then times Suresh's practice every morning at 5 AM at Kolkata's Maidan. Golden hour cinematography capturing their bond, her exhaustion, his determination. This relationship is what audiences will remember long after leaving the theater.</p>
                 </div>
 
-                <!-- Image Placeholder 4 with External Link -->
+                <!-- Image 4: The Victory Moment -->
                 <div style="background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%); padding: 30px; border-radius: 12px; box-shadow: 0 8px 20px rgba(0,0,0,0.2);">
-                    <!-- REPLACE THE # WITH YOUR EXTERNAL IMAGE LINK -->
-                    <a href="#" target="_blank" class="image-link-container">
-                        <div class="image-link-placeholder">
-                            CLICK TO VIEW:<br>
-                            <strong style="color: #2a5298;">The Victory Moment</strong><br>
-                            <span style="font-size: 0.8em;">(Suresh crossing the finish line, arms raised, breaking national record - 56.9 seconds)</span>
-                        </div>
-                        <div class="image-link-text">EXTERNAL LINK</div>
-                    </a>
+                    <div class="image-container">
+                        <!-- REPLACE THIS IMAGE SRC WITH YOUR EXTERNAL IMAGE URL -->
+                        <img src="https://i.postimg.cc/L5fNGKZP/IMG-3795.png" alt="The Victory Moment">
+                    </div>
                     <h4 style="color: white; font-size: clamp(1.2rem, 3vw, 1.5rem); margin-bottom: 10px;">The Victory Moment</h4>
                     <p style="color: white; font-size: clamp(0.9rem, 2.5vw, 1.1rem); line-height: 1.6;">After sabotage, media outrage, and a re-race, Suresh crosses the finish line with a national record time of 56.9 seconds. Arms raised, tears streaming, the entire stadium erupting. This is the moment that will trend on social media, that will be replayed on news channels, that will make India believe in the power of dreams over disability.</p>
                 </div>
 
-                <!-- Image Placeholder 5 with External Link -->
+                <!-- Image 5: The Rejected Father's Reckoning -->
                 <div style="background: linear-gradient(135deg, #ffecd2 0%, #fcb69f 100%); padding: 30px; border-radius: 12px; box-shadow: 0 8px 20px rgba(0,0,0,0.2);">
-                    <!-- REPLACE THE # WITH YOUR EXTERNAL IMAGE LINK -->
-                    <a href="#" target="_blank" class="image-link-container">
-                        <div class="image-link-placeholder">
-                            CLICK TO VIEW:<br>
-                            <strong style="color: #ff6b35;">The Rejected Father</strong><br>
-                            <span style="font-size: 0.8em;">(Ashok sitting alone in stadium stands, watching from afar after being rejected)</span>
-                        </div>
-                        <div class="image-link-text">EXTERNAL LINK</div>
-                    </a>
+                    <div class="image-container">
+                        <!-- REPLACE THIS IMAGE SRC WITH YOUR EXTERNAL IMAGE URL -->
+                        <img src="https://i.postimg.cc/bYHnVwZv/IMG-3783.png" alt="The Rejected Father's Reckoning">
+                    </div>
                     <h4 style="color: #444; font-size: clamp(1.2rem, 3vw, 1.5rem); margin-bottom: 10px;">The Rejected Father's Reckoning</h4>
                     <p style="color: #444; font-size: clamp(0.9rem, 2.5vw, 1.1rem); line-height: 1.6;">After traveling 24 hours by train to seek forgiveness, Ashok faces the consequences of his absence. Malati's cold rejection and Suresh's calm verdict: "You don't get to celebrate victories when you weren't there for the defeats." He sits alone in the stadium, watching his son from afar—a powerful commentary on fatherhood, regret, and the price of cowardice.</p>
                 </div>
 
-                <!-- Image Placeholder 6 with External Link -->
+                <!-- Image 6: From "Lyangra" to Legend -->
                 <div style="background: linear-gradient(135deg, #a8edea 0%, #fed6e3 100%); padding: 30px; border-radius: 12px; box-shadow: 0 8px 20px rgba(0,0,0,0.2);">
-                    <!-- REPLACE THE # WITH YOUR EXTERNAL IMAGE LINK -->
-                    <a href="#" target="_blank" class="image-link-container">
-                        <div class="image-link-placeholder">
-                            CLICK TO VIEW:<br>
-                            <strong style="color: #764ba2;">Village Mockery Scene</strong><br>
-                            <span style="font-size: 0.8em;">(Young Suresh sitting alone under banyan tree as children play cricket, calling him "Lyangra")</span>
-                        </div>
-                        <div class="image-link-text">EXTERNAL LINK</div>
-                    </a>
+                    <div class="image-container">
+                        <!-- REPLACE THIS IMAGE SRC WITH YOUR EXTERNAL IMAGE URL -->
+                        <img src="https://i.postimg.cc/X7PYQRky/IMG-3793.png" alt="From Lyangra to Legend">
+                    </div>
                     <h4 style="color: #444; font-size: clamp(1.2rem, 3vw, 1.5rem); margin-bottom: 10px;">From "Lyangra" to Legend</h4>
                     <p style="color: #444; font-size: clamp(0.9rem, 2.5vw, 1.1rem); line-height: 1.6;">The opening image that sets up the entire journey—6-year-old Suresh sits alone under a banyan tree, watching other children play cricket. They call him "Lyangra" (cripple) and laugh. Malati watches from a distance, her face torn between love and anguish. This is where the transformation begins—from village ridicule to national glory.</p>
                 </div>
@@ -748,7 +705,7 @@
 
             <div class="highlight-box" style="margin-top: 40px;">
                 <h3 style="color: white; margin-top: 0;">How to Add Your Images</h3>
-                <p style="color: white; font-size: clamp(1.1rem, 2.5vw, 1.25rem); margin: 0;">Replace the '#' in each href attribute with your external image URL (e.g., from Imgur, Google Drive, Dropbox, etc.). Each link opens in a new tab. Simply paste your image URL between the quotes: href="YOUR_IMAGE_URL_HERE"</p>
+                <p style="color: white; font-size: clamp(1.1rem, 2.5vw, 1.25rem); margin: 0;">Replace the placeholder image URLs in the 'src' attribute with your actual image URLs. Each image container has an &lt;img&gt; tag where you can add your external image link. Example: src="https://your-image-url.com/image.jpg"</p>
             </div>
         </div>
 
