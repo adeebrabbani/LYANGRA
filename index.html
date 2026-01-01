@@ -265,6 +265,51 @@
             font-size: clamp(1rem, 2.5vw, 1.3rem);
         }
         
+        /* Key Visual Moments Link Styles */
+        .image-link-container {
+            background: white;
+            height: 300px;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 15px;
+            border: 3px dashed #ccc;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .image-link-container:hover {
+            border-color: #ff6b35;
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+        }
+        
+        .image-link-placeholder {
+            color: #999;
+            font-size: clamp(1rem, 2.5vw, 1.3rem);
+            text-align: center;
+            padding: 20px;
+            transition: all 0.3s ease;
+        }
+        
+        .image-link-container:hover .image-link-placeholder {
+            color: #ff6b35;
+        }
+        
+        .image-link-text {
+            position: absolute;
+            bottom: 10px;
+            right: 10px;
+            background: rgba(255, 255, 255, 0.9);
+            padding: 5px 10px;
+            border-radius: 4px;
+            font-size: 0.8rem;
+            color: #2a5298;
+            font-weight: bold;
+        }
+        
         /* Mobile Responsive Styles */
         @media (max-width: 768px) {
             .deck-container {
@@ -315,13 +360,12 @@
             }
             
             /* Key Visual Moments adjustments */
-            .slide > div > div {
-                padding: 25px 20px !important;
+            .image-link-container {
+                height: 250px;
             }
             
-            .slide > div > div > div {
-                height: 250px !important;
-                margin-bottom: 15px !important;
+            .slide > div > div {
+                padding: 25px 20px !important;
             }
         }
         
@@ -386,18 +430,13 @@
                 font-size: 1.1rem;
             }
             
-            /* Fix for image placeholders on very small screens */
-            .slide > div > div > div > p {
-                font-size: 1rem !important;
-                padding: 15px !important;
+            .image-link-container {
+                height: 200px;
             }
             
-            .slide > div > div > h4 {
-                font-size: 1.3rem !important;
-            }
-            
-            .slide > div > div > p {
-                font-size: 1rem !important;
+            .image-link-placeholder {
+                font-size: 1rem;
+                padding: 15px;
             }
         }
         
@@ -605,90 +644,102 @@
             </div>
         </div>
 
-        <!-- SLIDE 7: KEY VISUAL MOMENTS -->
+        <!-- SLIDE 7: KEY VISUAL MOMENTS WITH EXTERNAL LINKS -->
         <div class="slide">
             <h2>Key Visual Moments from the Film</h2>
             
             <p style="text-align: center; font-size: clamp(1.1rem, 2.5vw, 1.3rem); margin-bottom: 30px; color: #2a5298;">
-                <em>The following frames represent the emotional and visual power that will captivate audiences</em>
+                <em>Click on each image placeholder to view the full reference image (external links will be added)</em>
             </p>
 
             <div style="display: grid; grid-template-columns: 1fr; gap: 30px; margin: 25px 0;">
                 
-                <!-- Image Placeholder 1 -->
+                <!-- Image Placeholder 1 with External Link -->
                 <div style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); padding: 30px; border-radius: 12px; box-shadow: 0 8px 20px rgba(0,0,0,0.2);">
-                    <div style="background: white; height: 300px; border-radius: 8px; display: flex; align-items: center; justify-content: center; margin-bottom: 15px; border: 3px dashed #ccc;">
-                        <p style="color: #999; font-size: clamp(1rem, 2.5vw, 1.3rem); text-align: center; padding: 15px;">
-                           <a href=https://i.postimg.cc/66fCxt0t/IMG-3794.png></a>
+                    <!-- REPLACE THE # WITH YOUR EXTERNAL IMAGE LINK -->
+                    <a href="#" target="_blank" class="image-link-container">
+                        <div class="image-link-placeholder">
+                            CLICK TO VIEW:<br>
                             <strong style="color: #667eea;">The Bleeding Feet Reveal</strong><br>
                             <span style="font-size: 0.8em;">(Suresh removes his shoes after winning his first race - bloodied, swollen feet)</span>
-                        </p>
-                    </div>
+                        </div>
+                        <div class="image-link-text">EXTERNAL LINK</div>
+                    </a>
                     <h4 style="color: white; font-size: clamp(1.2rem, 3vw, 1.5rem); margin-bottom: 10px;">The Bleeding Feet Reveal</h4>
                     <p style="color: white; font-size: clamp(0.9rem, 2.5vw, 1.1rem); line-height: 1.6;">After winning his first school race at age 10, Suresh removes his shoes to reveal bloodied, swollen feet. The moment that breaks every heart—his determination to run despite the pain. Malati's embrace and the doctor's devastating verdict that he must switch to wheelchair racing or lose function in his good leg.</p>
                 </div>
 
-                <!-- Image Placeholder 2 -->
+                <!-- Image Placeholder 2 with External Link -->
                 <div style="background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%); padding: 30px; border-radius: 12px; box-shadow: 0 8px 20px rgba(0,0,0,0.2);">
-                    <div style="background: white; height: 300px; border-radius: 8px; display: flex; align-items: center; justify-content: center; margin-bottom: 15px; border: 3px dashed #ccc;">
-                        <p style="color: #999; font-size: clamp(1rem, 2.5vw, 1.3rem); text-align: center; padding: 15px;">
-                            INSERT IMAGE:<br>
+                    <!-- REPLACE THE # WITH YOUR EXTERNAL IMAGE LINK -->
+                    <a href="#" target="_blank" class="image-link-container">
+                        <div class="image-link-placeholder">
+                            CLICK TO VIEW:<br>
                             <strong style="color: #f5576c;">The Suresh Surge</strong><br>
                             <span style="font-size: 0.8em;">(Dynamic shot of Suresh executing his signature move during the final race)</span>
-                        </p>
-                    </div>
+                        </div>
+                        <div class="image-link-text">EXTERNAL LINK</div>
+                    </a>
                     <h4 style="color: white; font-size: clamp(1.2rem, 3vw, 1.5rem); margin-bottom: 10px;">The Suresh Surge</h4>
                     <p style="color: white; font-size: clamp(0.9rem, 2.5vw, 1.1rem); line-height: 1.6;">The signature move that defines Suresh's racing style—explosive double-push technique combined with fearless 45-degree cornering in the final 100 meters. This is the visual spectacle that will have audiences on their feet. High-speed cinematography capturing every muscle, every push, every moment of pure determination.</p>
                 </div>
 
-                <!-- Image Placeholder 3 -->
+                <!-- Image Placeholder 3 with External Link -->
                 <div style="background: linear-gradient(135deg, #ff6b35 0%, #f7931e 100%); padding: 30px; border-radius: 12px; box-shadow: 0 8px 20px rgba(0,0,0,0.2);">
-                    <div style="background: white; height: 300px; border-radius: 8px; display: flex; align-items: center; justify-content: center; margin-bottom: 15px; border: 3px dashed #ccc;">
-                        <p style="color: #999; font-size: clamp(1rem, 2.5vw, 1.3rem); text-align: center; padding: 15px;">
-                            INSERT IMAGE:<br>
+                    <!-- REPLACE THE # WITH YOUR EXTERNAL IMAGE LINK -->
+                    <a href="#" target="_blank" class="image-link-container">
+                        <div class="image-link-placeholder">
+                            CLICK TO VIEW:<br>
                             <strong style="color: #ff6b35;">Mother & Son at Dawn Training</strong><br>
                             <span style="font-size: 0.8em;">(Malati timing Suresh at 5 AM in Kolkata Maidan - golden hour lighting)</span>
-                        </p>
-                    </div>
+                        </div>
+                        <div class="image-link-text">EXTERNAL LINK</div>
+                    </a>
                     <h4 style="color: white; font-size: clamp(1.2rem, 3vw, 1.5rem); margin-bottom: 10px;">Mother & Son at Dawn Training</h4>
                     <p style="color: white; font-size: clamp(0.9rem, 2.5vw, 1.1rem); line-height: 1.6;">The heart of the film—Malati works night shifts as a cook, then times Suresh's practice every morning at 5 AM at Kolkata's Maidan. Golden hour cinematography capturing their bond, her exhaustion, his determination. This relationship is what audiences will remember long after leaving the theater.</p>
                 </div>
 
-                <!-- Image Placeholder 4 -->
+                <!-- Image Placeholder 4 with External Link -->
                 <div style="background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%); padding: 30px; border-radius: 12px; box-shadow: 0 8px 20px rgba(0,0,0,0.2);">
-                    <div style="background: white; height: 300px; border-radius: 8px; display: flex; align-items: center; justify-content: center; margin-bottom: 15px; border: 3px dashed #ccc;">
-                        <p style="color: #999; font-size: clamp(1rem, 2.5vw, 1.3rem); text-align: center; padding: 15px;">
-                            INSERT IMAGE:<br>
+                    <!-- REPLACE THE # WITH YOUR EXTERNAL IMAGE LINK -->
+                    <a href="#" target="_blank" class="image-link-container">
+                        <div class="image-link-placeholder">
+                            CLICK TO VIEW:<br>
                             <strong style="color: #2a5298;">The Victory Moment</strong><br>
                             <span style="font-size: 0.8em;">(Suresh crossing the finish line, arms raised, breaking national record - 56.9 seconds)</span>
-                        </p>
-                    </div>
+                        </div>
+                        <div class="image-link-text">EXTERNAL LINK</div>
+                    </a>
                     <h4 style="color: white; font-size: clamp(1.2rem, 3vw, 1.5rem); margin-bottom: 10px;">The Victory Moment</h4>
                     <p style="color: white; font-size: clamp(0.9rem, 2.5vw, 1.1rem); line-height: 1.6;">After sabotage, media outrage, and a re-race, Suresh crosses the finish line with a national record time of 56.9 seconds. Arms raised, tears streaming, the entire stadium erupting. This is the moment that will trend on social media, that will be replayed on news channels, that will make India believe in the power of dreams over disability.</p>
                 </div>
 
-                <!-- Image Placeholder 5 -->
+                <!-- Image Placeholder 5 with External Link -->
                 <div style="background: linear-gradient(135deg, #ffecd2 0%, #fcb69f 100%); padding: 30px; border-radius: 12px; box-shadow: 0 8px 20px rgba(0,0,0,0.2);">
-                    <div style="background: white; height: 300px; border-radius: 8px; display: flex; align-items: center; justify-content: center; margin-bottom: 15px; border: 3px dashed #ccc;">
-                        <p style="color: #999; font-size: clamp(1rem, 2.5vw, 1.3rem); text-align: center; padding: 15px;">
-                            INSERT IMAGE:<br>
+                    <!-- REPLACE THE # WITH YOUR EXTERNAL IMAGE LINK -->
+                    <a href="#" target="_blank" class="image-link-container">
+                        <div class="image-link-placeholder">
+                            CLICK TO VIEW:<br>
                             <strong style="color: #ff6b35;">The Rejected Father</strong><br>
                             <span style="font-size: 0.8em;">(Ashok sitting alone in stadium stands, watching from afar after being rejected)</span>
-                        </p>
-                    </div>
+                        </div>
+                        <div class="image-link-text">EXTERNAL LINK</div>
+                    </a>
                     <h4 style="color: #444; font-size: clamp(1.2rem, 3vw, 1.5rem); margin-bottom: 10px;">The Rejected Father's Reckoning</h4>
                     <p style="color: #444; font-size: clamp(0.9rem, 2.5vw, 1.1rem); line-height: 1.6;">After traveling 24 hours by train to seek forgiveness, Ashok faces the consequences of his absence. Malati's cold rejection and Suresh's calm verdict: "You don't get to celebrate victories when you weren't there for the defeats." He sits alone in the stadium, watching his son from afar—a powerful commentary on fatherhood, regret, and the price of cowardice.</p>
                 </div>
 
-                <!-- Image Placeholder 6 -->
+                <!-- Image Placeholder 6 with External Link -->
                 <div style="background: linear-gradient(135deg, #a8edea 0%, #fed6e3 100%); padding: 30px; border-radius: 12px; box-shadow: 0 8px 20px rgba(0,0,0,0.2);">
-                    <div style="background: white; height: 300px; border-radius: 8px; display: flex; align-items: center; justify-content: center; margin-bottom: 15px; border: 3px dashed #ccc;">
-                        <p style="color: #999; font-size: clamp(1rem, 2.5vw, 1.3rem); text-align: center; padding: 15px;">
-                            INSERT IMAGE:<br>
+                    <!-- REPLACE THE # WITH YOUR EXTERNAL IMAGE LINK -->
+                    <a href="#" target="_blank" class="image-link-container">
+                        <div class="image-link-placeholder">
+                            CLICK TO VIEW:<br>
                             <strong style="color: #764ba2;">Village Mockery Scene</strong><br>
                             <span style="font-size: 0.8em;">(Young Suresh sitting alone under banyan tree as children play cricket, calling him "Lyangra")</span>
-                        </p>
-                    </div>
+                        </div>
+                        <div class="image-link-text">EXTERNAL LINK</div>
+                    </a>
                     <h4 style="color: #444; font-size: clamp(1.2rem, 3vw, 1.5rem); margin-bottom: 10px;">From "Lyangra" to Legend</h4>
                     <p style="color: #444; font-size: clamp(0.9rem, 2.5vw, 1.1rem); line-height: 1.6;">The opening image that sets up the entire journey—6-year-old Suresh sits alone under a banyan tree, watching other children play cricket. They call him "Lyangra" (cripple) and laugh. Malati watches from a distance, her face torn between love and anguish. This is where the transformation begins—from village ridicule to national glory.</p>
                 </div>
@@ -696,8 +747,8 @@
             </div>
 
             <div class="highlight-box" style="margin-top: 40px;">
-                <h3 style="color: white; margin-top: 0;">Why These Moments Matter</h3>
-                <p style="color: white; font-size: clamp(1.1rem, 2.5vw, 1.25rem); margin: 0;">These aren't just scenes—they're cultural moments that will spark conversations, social media trends, and emotional connections. Each frame is designed for maximum impact, both in theaters and in marketing campaigns. These are the images that will make Lyangra unforgettable.</p>
+                <h3 style="color: white; margin-top: 0;">How to Add Your Images</h3>
+                <p style="color: white; font-size: clamp(1.1rem, 2.5vw, 1.25rem); margin: 0;">Replace the '#' in each href attribute with your external image URL (e.g., from Imgur, Google Drive, Dropbox, etc.). Each link opens in a new tab. Simply paste your image URL between the quotes: href="YOUR_IMAGE_URL_HERE"</p>
             </div>
         </div>
 
@@ -744,7 +795,7 @@
             </div>
         </div>
 
-        <!-- SLIDE 11: PRODUCTION PLAN -->
+        <!-- SLIDE 9: PRODUCTION PLAN -->
         <div class="slide">
             <h2>World-Class Creative Team Attached</h2>
             
@@ -757,23 +808,17 @@
             <p><strong>Kolkata-born filmmaker with global acclaim</strong></p>
             <p>Indira Dhar has swiftly become a compelling voice in Indian cinema, blending emotional depth with global appeal. Her debut Bengali feature <strong>Putul</strong> (2024), about the lives of street children, premiered to a standing ovation at <strong>Cannes Film Festival</strong> and was considered for the <strong>97th Academy Awards in three categories</strong>. It had a special screening at IFFI Goa, 2025.</p>
             
-            <p>In 2025, she ventured into Hindi cinema with <strong>Echoes of Valour</strong>, a poignant biopic starring Divya Dutta and Neeraj Kabi, which was unveiled at Cannes, had a closed-door screening at Venice, and is now touring the international festival circuit.</p>
-            
             <p style="background: #f8f9fa; padding: 15px; border-radius: 8px; margin-top: 15px; font-size: clamp(0.9rem, 2.5vw, 1rem);"><strong>Why Indira for Lyangra:</strong> A filmmaker who often self-funds her work, Indira crafts stories rooted in truth, resilience, and universal human connection. Her ability to extract raw performances from non-actors and children, combined with her festival-proven eye for authentic storytelling, makes her the perfect visionary for Suresh's journey.</p>
 
             <h3 style="margin-top: 30px;">Editor: ARGHYAKAMAL MITRA</h3>
             <p><strong>National Award Winner for Best Editing</strong></p>
             <p>Arghyakamal Mitra is one of Bengali cinema's most respected editors, having collaborated with acclaimed directors like <strong>Aparna Sen, Rituparno Ghosh, Aniruddha Roy Chowdhury, Suman Mukhopadhyay, Anjan Dutta, Anik Dutta, Soukarya Ghosal</strong>, and <strong>Bauddhayan Mukherji</strong>.</p>
             
-            <p>He won the <strong>National Film Award for Best Editing</strong> for his masterful work in Rituparno Ghosh's film <strong>Abohomaan</strong>, demonstrating his ability to craft emotional rhythms and narrative pacing that elevate intimate character dramas.</p>
-            
             <p style="background: #f8f9fa; padding: 15px; border-radius: 8px; margin-top: 15px; font-size: clamp(0.9rem, 2.5vw, 1rem);"><strong>Why Arghyakamal for Lyangra:</strong> The film's structure—shifting between intimate family moments and high-octane racing sequences—demands an editor who understands both emotional beats and kinetic energy. Arghyakamal's proven mastery in Bengali cinema ensures authenticity while his technical precision will make the racing sequences pulse with adrenaline.</p>
 
             <h3 style="margin-top: 30px;">Music Director: SAYAN GANGULY</h3>
             <p><strong>Oscar-Contending Composer</strong></p>
             <p>Sayan Ganguly is a prominent Indian music composer, music director, and arranger known for his versatile work in Bengali cinema. His notable projects include <strong>Durgeshgorer Guptodhon, Tenida and Company</strong>, and <strong>Putul</strong>—the latter earning <strong>Oscar contention for both its song and score</strong>.</p>
-            
-            <p>Recognized as a multifaceted musician who also works as a singer and lyricist, Sayan has been involved in high-profile projects like the <strong>Amriter Sandhane - The Banaras Chapter</strong> soundtrack, demonstrating his ability to blend traditional Indian sounds with contemporary arrangements.</p>
             
             <p style="background: #f8f9fa; padding: 15px; border-radius: 8px; margin-top: 15px; font-size: clamp(0.9rem, 2.5vw, 1rem);"><strong>Why Sayan for Lyangra:</strong> The film requires a musical palette that transitions seamlessly from traditional Bengali folk (village scenes) to pulsing, anthemic compositions (racing sequences). Sayan's Oscar-contending work on Putul proves he can create emotionally devastating music that resonates globally while staying rooted in Bengali culture. His score will be the heartbeat of Suresh's journey.</p>
 
@@ -1032,7 +1077,7 @@
             </div>
         </div>
 
-        <!-- SLIDE 14: CALL TO ACTION -->
+        <!-- SLIDE 15: CALL TO ACTION -->
         <div class="slide">
             <div class="cta-box">
                 <h2>Let's Create History Together</h2>
